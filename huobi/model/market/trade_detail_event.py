@@ -19,10 +19,10 @@ class TradeDetailEvent:
 
     def print_object(self, format_data=""):
         from huobi.utils.print_mix_object import PrintBasic
-        PrintBasic.print_basic(self.ch, format_data + "Channel")
-        PrintBasic.print_basic(self.id, format_data + "ID")
-        PrintBasic.print_basic(self.ts, format_data + "Unix Time")
+        # PrintBasic.print_basic(self.ch, format_data + "Channel")
+        # PrintBasic.print_basic(self.id, format_data + "ID")
+        # PrintBasic.print_basic(self.ts, format_data + "Unix Time")
         if len(self.data):
             for trade_detail in self.data:
-                trade_detail.print_object()
+                trade_detail.print_object_line()
                 print()
