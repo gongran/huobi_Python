@@ -33,10 +33,12 @@ class TradeDetail:
                                                             opt="买" if self.direction == "buy" else "卖")
         print(info)
 
-    def return_object_line(self, format_data=""):
+    def return_object_line(self, format_data="") -> object:
         # info = "{id} {time} {price} {amount} {direction}".format(id=self.tradeId, time=self.ts, price=self.price,
         #                                                          amount=self.amount, direction=self.direction)
         info = "{opt} {direction} {price} {amount} ".format(id=self.tradeId, time=self.ts, price=self.price,
                                                             amount=self.amount, direction=self.direction,
                                                             opt="买" if self.direction == "buy" else "卖")
-        print(info)
+
+        return {'from_type': 'HB', 'deal_id': self.tradeId, 'deal_time': self.ts, 'price': self.price,
+                'amount': self.amount, 'direction': self.direction}

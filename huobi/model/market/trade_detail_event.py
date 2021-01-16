@@ -1,5 +1,3 @@
-
-
 class TradeDetailEvent:
     """
     The trade received by subscription of trade.
@@ -16,13 +14,20 @@ class TradeDetailEvent:
         self.ts = 0
         self.data = list()
 
+    def get_trade_data(self):
+        if len(self.data):
+            for trade_detail in self.data:
+                trade_detail.return_object_line()
 
     def print_object(self, format_data=""):
         from huobi.utils.print_mix_object import PrintBasic
         # PrintBasic.print_basic(self.ch, format_data + "Channel")
         # PrintBasic.print_basic(self.id, format_data + "ID")
         # PrintBasic.print_basic(self.ts, format_data + "Unix Time")
+        objs = []
         if len(self.data):
             for trade_detail in self.data:
-                trade_detail.print_object_line()
+                obj = trade_detail.return_object_line()
+                objs.append(obj)
                 print()
+        return objs

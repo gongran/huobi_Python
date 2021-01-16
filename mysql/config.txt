@@ -1,0 +1,7 @@
+[db]
+DBHOST=localhost
+DBPORT=3306
+DBUSER=root
+DBPWD=abc123
+DBNAME=coins
+DBCHAR=utf8
