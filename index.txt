@@ -1,0 +1,3 @@
+git remote add myOrigin https://github.com/gongran/huobi_Python.git
+git push -u myOrigin master
+git remote remove origin 解除关系
