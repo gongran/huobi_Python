@@ -10,7 +10,7 @@ config = {
     'port': 3306,
     'database': 'coins',
     'user': 'root',
-    'password': 'abc123',
+    'password': '',
     'charset': 'utf8'
 }
 

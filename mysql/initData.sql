@@ -4,6 +4,7 @@ create table trade
 (
     id        bigint auto_increment primary key,
     from_type varchar(20) not null,
+    coin_type varchar(50)  null,
     deal_id   bigint null,
     deal_time bigint null,
     price     decimal(20, 10) null,

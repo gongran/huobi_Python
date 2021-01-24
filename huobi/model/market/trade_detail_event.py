@@ -29,5 +29,4 @@ class TradeDetailEvent:
             for trade_detail in self.data:
                 obj = trade_detail.return_object_line()
                 objs.append(obj)
-                print()
         return objs
