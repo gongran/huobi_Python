@@ -21,5 +21,6 @@ def callback(trade_event: 'TradeDetailEvent'):
     my_db.insert_objs("trade", objs)
 
 
+
 market_client = MarketClient(init_log=True)
 market_client.sub_trade_detail(symbols, callback)
